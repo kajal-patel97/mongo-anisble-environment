@@ -1,0 +1,8 @@
+- hosts:
+  - 192.168.10.150
+  remote_user: vagrant
+  become: yes
+  become_user: root
+  tasks:
+    - name: Getting the MongoDB key for version 3.2
+      shell: wget -qO - https://www.mongodb.org/static/pgp/server-3.2.asc | sudo apt-key add -
