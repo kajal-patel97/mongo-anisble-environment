@@ -1,0 +1,8 @@
+venv
+.idea/
+.vagrant
+aws_keys.txt
+secrets.txt
+aah_key_something
+app/node_modules/
+ubuntu-xenial-16.04-cloudimg-console.log
