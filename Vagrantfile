@@ -9,5 +9,9 @@ Vagrant.configure("2") do |config|
 # synced folders enable vagrant o sync a folder on the host machine to the guest machine
   # the first parameters is the path on the host machine and the second parameter is on the guest machine (vm )
   config.vm.synced_folder "environment/db" , "vagrant/envrionment/db "
+# provisioning is where you configure ansible to run commands automatically
+  config.vm.provision "ansible" do |ansible|
+    ansible.playbook = "playbook.yml"
+  end
 
 end
