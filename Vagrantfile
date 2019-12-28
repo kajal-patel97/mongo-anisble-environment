@@ -1,3 +1,8 @@
+# Install required plugins
+required_plugins = ["vagrant-hostsupdater"]
+required_plugins.each do |plugin|
+    exec "vagrant plugin install #{plugin}" unless Vagrant.has_plugin? plugin
+end
 
 Vagrant.configure("2") do |config|
 #This is the box that it is going to run off- the interface it uses.
